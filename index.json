@@ -1,5 +1,33 @@
 [
     {
+        "name": "2024-10-19_U3054914.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/2024-10-19_U3054914.json",
+        "launch_city": "São Carlos",
+        "max_altitude": 24391.39122,
+        "launch_datetime": "19/10/2024"
+    },
+    {
+        "name": "2024-04-27_U3054914.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/2024-04-27_U3054914.json",
+        "launch_city": "São Carlos",
+        "max_altitude": 26801.2043,
+        "launch_datetime": "27/04/2024"
+    },
+    {
+        "name": "2024-03-16_U3054914.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/2024-03-16_U3054914.json",
+        "launch_city": "São Carlos",
+        "max_altitude": 26657.74951,
+        "launch_datetime": "16/03/2024"
+    },
+    {
+        "name": "2023-09-15_U3054914.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/2023-09-15_U3054914.json",
+        "launch_city": "Parnamirim",
+        "max_altitude": 22126.73242,
+        "launch_datetime": "15/09/2023"
+    },
+    {
         "name": "014_J4840095_day_2.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/014_J4840095_day_2.json",
         "launch_city": "Brasília",
@@ -18,13 +46,6 @@
         "download_url": "https://zenitheesc.github.io/launches-data/contents/012_J4840095_day_0.json",
         "launch_city": "São Carlos",
         "max_altitude": 23232.01193,
-        "launch_datetime": "09/10/2022"
-    },
-    {
-        "name": "013_J4840152_day_0.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/013_J4840152_day_0.json",
-        "launch_city": "São Carlos",
-        "max_altitude": 6760.75058,
         "launch_datetime": "09/10/2022"
     },
     {
