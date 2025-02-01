@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from datetime import datetime
 
 # Configuração dos diretórios e URLs
 CONTENTS_DIR = "contents"
@@ -25,7 +26,7 @@ def get_city_from_coordinates(lat, lon):
     return "Desconhecido"
 
 def process_json_file(filepath):
-    """Lê o arquivo JSON e retorna a cidade de lançamento e a altitude máxima."""
+    """Lê o arquivo JSON e retorna a cidade de lançamento, a altitude máxima e a data do lançamento."""
     try:
         with open(filepath, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -43,9 +44,13 @@ def process_json_file(filepath):
         # Obtém a cidade
         city = get_city_from_coordinates(lat, lon) if lat and lon else "Desconhecido"
 
+        # Obtém a data do lançamento
+        launch_datetime = first_entry.get("datetime", "Desconhecido")
+
         return {
             "launch_city": city,
-            "max_altitude": max_altitude
+            "max_altitude": max_altitude,
+            "launch_datetime": launch_datetime
         }
     except Exception as e:
         print(f"Erro ao processar {filepath}: {e}")
@@ -82,11 +87,16 @@ def generate_index():
                     "name": file,
                     "download_url": BASE_URL + file,
                     "launch_city": metadata["launch_city"],
-                    "max_altitude": metadata["max_altitude"]
+                    "max_altitude": metadata["max_altitude"],
+                    "launch_datetime": metadata["launch_datetime"]
                 })
 
     # Só atualiza o index.json se houver novos arquivos
     if new_entries:
+        # Ordena as novas entradas por data de lançamento (mais recente primeiro)
+        new_entries.sort(key=lambda x: datetime.strptime(x["launch_datetime"], "%Y-%m-%dT%H:%M:%S.%fZ"), reverse=True)
+
+        # Atualiza o índice com as novas entradas ordenadas
         updated_index = existing_index + new_entries
         with open(INDEX_FILE, "w", encoding="utf-8") as f:
             json.dump(updated_index, f, indent=4, ensure_ascii=False)

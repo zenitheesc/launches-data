@@ -1,92 +1,107 @@
 [
     {
-        "name": "000_T4220752_day_0.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/000_T4220752_day_0.json",
-        "launch_city": "Londrina",
-        "max_altitude": 25927.02095
-    },
-    {
-        "name": "001_T4150774_day_0.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/001_T4150774_day_0.json",
-        "launch_city": "Londrina",
-        "max_altitude": 26228.84185
-    },
-    {
-        "name": "002_T0350530_day_0.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/002_T0350530_day_0.json",
-        "launch_city": "Rio de Janeiro",
-        "max_altitude": 24684.63735
-    },
-    {
-        "name": "003_T0351008_day_0.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/003_T0351008_day_0.json",
-        "launch_city": "Rio de Janeiro",
-        "max_altitude": 12155.96184
+        "name": "014_J4840095_day_2.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/014_J4840095_day_2.json",
+        "launch_city": "Brasília",
+        "max_altitude": 26933.76074,
+        "launch_datetime": "2022-12-04T17:09:53.000000Z"
     },
     {
         "name": "011_J4830342_day_0.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/011_J4830342_day_0.json",
         "launch_city": "São Carlos",
-        "max_altitude": 25239.60051
+        "max_altitude": 25239.60051,
+        "launch_datetime": "2022-10-09T12:57:22.000000Z"
     },
     {
         "name": "012_J4840095_day_0.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/012_J4840095_day_0.json",
         "launch_city": "São Carlos",
-        "max_altitude": 23232.01193
+        "max_altitude": 23232.01193,
+        "launch_datetime": "2022-10-09T12:46:19.000000Z"
     },
     {
         "name": "013_J4840152_day_0.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/013_J4840152_day_0.json",
         "launch_city": "São Carlos",
-        "max_altitude": 6760.75058
-    },
-    {
-        "name": "014_J4840095_day_2.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/014_J4840095_day_2.json",
-        "launch_city": "Brasília",
-        "max_altitude": 26933.76074
-    },
-    {
-        "name": "004_T0351008_day_1.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/004_T0351008_day_1.json",
-        "launch_city": "São Gonçalo",
-        "max_altitude": 24397.9039
-    },
-    {
-        "name": "005_T4150774_day_1.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/005_T4150774_day_1.json",
-        "launch_city": "Tatuí",
-        "max_altitude": 22875.68551
-    },
-    {
-        "name": "006_T4220752_day_1.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/006_T4220752_day_1.json",
-        "launch_city": "Santa Maria",
-        "max_altitude": 25022.38281
-    },
-    {
-        "name": "007_T4220752_day_2.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/007_T4220752_day_2.json",
-        "launch_city": "Rio de Janeiro",
-        "max_altitude": 24508.22591
-    },
-    {
-        "name": "008_T0350530_day_3.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/008_T0350530_day_3.json",
-        "launch_city": "Parnamirim",
-        "max_altitude": 27381.78636
-    },
-    {
-        "name": "009_T0351008_day_4.json",
-        "download_url": "https://zenitheesc.github.io/launches-data/contents/009_T0351008_day_4.json",
-        "launch_city": "Parnamirim",
-        "max_altitude": 25934.54936
+        "max_altitude": 6760.75058,
+        "launch_datetime": "2022-10-09T12:42:14.000000Z"
     },
     {
         "name": "010_J4830341_day_0.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/010_J4830341_day_0.json",
         "launch_city": "São Carlos",
-        "max_altitude": 22717.87148
+        "max_altitude": 22717.87148,
+        "launch_datetime": "2022-10-09T12:39:26.999000Z"
+    },
+    {
+        "name": "009_T0351008_day_4.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/009_T0351008_day_4.json",
+        "launch_city": "Parnamirim",
+        "max_altitude": 25934.54936,
+        "launch_datetime": "2022-09-02T17:32:19.000000Z"
+    },
+    {
+        "name": "008_T0350530_day_3.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/008_T0350530_day_3.json",
+        "launch_city": "Parnamirim",
+        "max_altitude": 27381.78636,
+        "launch_datetime": "2022-09-02T13:07:11.995000Z"
+    },
+    {
+        "name": "007_T4220752_day_2.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/007_T4220752_day_2.json",
+        "launch_city": "Rio de Janeiro",
+        "max_altitude": 24508.22591,
+        "launch_datetime": "2022-08-20T17:48:17.988000Z"
+    },
+    {
+        "name": "006_T4220752_day_1.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/006_T4220752_day_1.json",
+        "launch_city": "Santa Maria",
+        "max_altitude": 25022.38281,
+        "launch_datetime": "2022-08-13T05:23:35.995000Z"
+    },
+    {
+        "name": "005_T4150774_day_1.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/005_T4150774_day_1.json",
+        "launch_city": "Tatuí",
+        "max_altitude": 22875.68551,
+        "launch_datetime": "2022-08-06T02:28:49.000Z"
+    },
+    {
+        "name": "004_T0351008_day_1.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/004_T0351008_day_1.json",
+        "launch_city": "São Gonçalo",
+        "max_altitude": 24397.9039,
+        "launch_datetime": "2022-07-16T00:00:00.000000Z"
+    },
+    {
+        "name": "003_T0351008_day_0.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/003_T0351008_day_0.json",
+        "launch_city": "Rio de Janeiro",
+        "max_altitude": 12155.96184,
+        "launch_datetime": "2022-07-15T23:31:55.000000Z"
+    },
+    {
+        "name": "002_T0350530_day_0.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/002_T0350530_day_0.json",
+        "launch_city": "Rio de Janeiro",
+        "max_altitude": 24684.63735,
+        "launch_datetime": "2022-04-20T11:33:47.000000Z"
+    },
+    {
+        "name": "001_T4150774_day_0.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/001_T4150774_day_0.json",
+        "launch_city": "Londrina",
+        "max_altitude": 26228.84185,
+        "launch_datetime": "2022-02-28T11:33:40.000000Z"
+    },
+    {
+        "name": "000_T4220752_day_0.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/000_T4220752_day_0.json",
+        "launch_city": "Londrina",
+        "max_altitude": 25927.02095,
+        "launch_datetime": "2022-02-07T11:34:43.000000Z"
     }
 ]
