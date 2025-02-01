@@ -46,15 +46,28 @@ def process_json_file(filepath):
 
         # Obtém a data do lançamento
         launch_datetime = first_entry.get("datetime", "Desconhecido")
+        # Converte a data para o formato dia/mês/ano
+        formatted_datetime = format_date(launch_datetime)
 
         return {
             "launch_city": city,
             "max_altitude": max_altitude,
-            "launch_datetime": launch_datetime
+            "launch_datetime": formatted_datetime
         }
     except Exception as e:
         print(f"Erro ao processar {filepath}: {e}")
         return None
+
+def format_date(date_str):
+    """Converte a data para o formato dia/mês/ano."""
+    try:
+        # Converte a data ISO para datetime
+        date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+        # Retorna a data no formato dia/mês/ano
+        return date_obj.strftime("%d/%m/%Y")
+    except Exception as e:
+        print(f"Erro ao formatar a data: {e}")
+        return "Desconhecido"
 
 def load_existing_index():
     """Carrega o index.json existente para evitar reprocessamento."""
@@ -94,7 +107,7 @@ def generate_index():
     # Só atualiza o index.json se houver novos arquivos
     if new_entries:
         # Ordena as novas entradas por data de lançamento (mais recente primeiro)
-        new_entries.sort(key=lambda x: datetime.strptime(x["launch_datetime"], "%Y-%m-%dT%H:%M:%S.%fZ"), reverse=True)
+        new_entries.sort(key=lambda x: datetime.strptime(x["launch_datetime"], "%d/%m/%Y"), reverse=True)
 
         # Atualiza o índice com as novas entradas ordenadas
         updated_index = existing_index + new_entries
