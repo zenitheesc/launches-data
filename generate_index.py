@@ -2,26 +2,45 @@ import os
 import json
 import requests
 from datetime import datetime
+from dotenv import load_dotenv  
+
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
 
 # Configuração dos diretórios e URLs
 CONTENTS_DIR = "contents"
 INDEX_FILE = "index.json"
 BASE_URL = "https://zenitheesc.github.io/launches-data/contents/"
-NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
+OPENCAGE_API_URL = "https://api.opencagedata.com/geocode/v1/json"
+OPENCAGE_API_KEY = os.getenv("API_KEY")  # Carrega a chave da API do .env
 HEADERS = {"User-Agent": "launches-data-bot"}
 
 def get_city(lat, lon):
-    """Obtém a cidade a partir das coordenadas usando a API do Nominatim."""
+    """Obtém a cidade a partir das coordenadas usando a API do OpenCage."""
     if lat is None or lon is None:
         return "Desconhecido"
     
     try:
-        response = requests.get(NOMINATIM_URL, params={"lat": lat, "lon": lon, "format": "json"}, headers=HEADERS)
+        params = {
+            "q": f"{lat},{lon}",
+            "key": OPENCAGE_API_KEY,
+            "language": "pt"  # Define o idioma da resposta
+        }
+        response = requests.get(OPENCAGE_API_URL, params=params, headers=HEADERS)
         response.raise_for_status()
-        return response.json().get("address", {}).get("city", "Desconhecido")
+        results = response.json().get("results", [])
+        
+        if results:
+            components = results[0].get("components", {})
+            # Procura por cidade, vila ou município
+            for field in ["city", "town", "village", "municipality"]:
+                if field in components:
+                    return components[field]
+        return "Desconhecido"
     except requests.RequestException as e:
         print(f"Erro ao buscar cidade para {lat}, {lon}: {e}")
         return "Desconhecido"
+
 
 def process_json(filepath):
     """Lê um arquivo JSON e retorna informações relevantes do lançamento."""
@@ -45,6 +64,7 @@ def process_json(filepath):
         print(f"Erro ao processar {filepath}: {e}")
         return None
 
+
 def load_existing_index():
     """Carrega o index.json existente."""
     if os.path.exists(INDEX_FILE):
@@ -54,6 +74,7 @@ def load_existing_index():
         except (json.JSONDecodeError, OSError) as e:
             print(f"Erro ao carregar {INDEX_FILE}: {e}")
     return []
+
 
 def generate_index():
     """Gera ou atualiza o index.json com novos arquivos JSON processados."""
