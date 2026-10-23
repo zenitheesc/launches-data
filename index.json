@@ -1,5 +1,13 @@
 [
     {
+        "name": "2026-10-03_U3054388.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/2026-10-03_U3054388.json",
+        "launch_city": "São Carlos",
+        "landing_city": "Itapira",
+        "max_altitude": 25284.02878,
+        "launch_datetime": "2026-10-03T12:15:36.005000Z"
+    },
+    {
         "name": "2024-10-19_U3054914.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/2024-10-19_U3054914.json",
         "launch_city": "São Carlos",
