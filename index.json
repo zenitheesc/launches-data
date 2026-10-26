@@ -1,5 +1,13 @@
 [
     {
+        "name": "2026-10-24_U3054388.json",
+        "download_url": "https://zenitheesc.github.io/launches-data/contents/2026-10-24_U3054388.json",
+        "launch_city": "São Carlos",
+        "landing_city": "Casa Branca",
+        "max_altitude": 24348.7184,
+        "launch_datetime": "2026-10-24T12:41:47.988000Z"
+    },
+    {
         "name": "2026-10-03_U3054388.json",
         "download_url": "https://zenitheesc.github.io/launches-data/contents/2026-10-03_U3054388.json",
         "launch_city": "São Carlos",
